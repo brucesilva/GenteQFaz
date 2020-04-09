@@ -1,0 +1,123 @@
+body{
+/*	background: url("./img/fundo.jpg");  */
+	background: linear-gradient(-105deg, #90697b, #141646 50%, #2f2a60);
+	background-size: 100%; /*aqui é para deixar a imagem 100% da tela */
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+
+h1{
+	color: white;
+	font-family: arial;
+	text-align: center;
+	font-size: 50px;
+	background-color: rgba(50,11,110,0.2); 
+	padding: 15px 0;
+	width: 100%;
+	margin: 0;
+}
+
+h2{
+	margin-top: 40px;
+	padding-bottom: 10px;
+	text-align: center;
+}
+.caixaLogin{
+	/* background-color: rgba(0,0,0,0.9);*/
+	background-color: transparent;
+	border: 1px solid red;
+	width: 300px;
+	padding: 20px;
+	border-radius: 50px 10px 50px 10px;
+	box-shadow: 0 20px 20px ; /*aqui é para colocar borda */
+	position: relative;
+	height: 200px;
+
+
+}
+
+.caixaLogin .campo input{
+	width: 100%;
+	padding: 5px;
+	font-size: 17px;
+	background:transparent;
+	color: white;
+	letter-spacing: 5px;
+	border: ;
+	border-radius: 5px;
+	outline: none;
+	border-bottom: 1px solid white;
+	box-sizing: border-box;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing: border-box;
+}
+
+.caixaLogin .campo{
+	position: relative;
+}
+
+.caixaLogin .campo label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 10px 0;
+	margin-left: 10px;
+	font-size: 16px;
+	color: white;
+	font-family: arial;
+	pointer-events: none;
+	transition: ;
+ 
+}
+
+/*aqui é pra quando eu clicar no campo ele vai mudar de cor */
+.caixaLogin .campo input:focus~label,
+.caixaLogin .campo input:valid~label{
+	top: -30px;
+	left: 0;
+	color: violet;
+	font-size: 16px;
+}
+
+.caixaLogin button{
+	width: 50%;
+	height: 40px;
+	border:none;
+	outline: none;
+	color: white;
+	margin-top: 10px;
+	background: linear-gradient(to  right, #3c269c, #eb7a80);
+	padding: 10px 20px;
+	font-size: 15px;
+	cursor: pointer;
+	border-radius: 5px;
+
+}
+
+#cadastro{
+
+}
+
+.img-user{
+	background: ;
+	margin: auto;
+	  width: 70px;
+	height: 70px;   
+	left: 0;
+	right: 0;
+	border-radius: 30px;
+	top: -15%;
+	position: absolute;
+	box-shadow: 10px 10px 10px; ; /*aqui é para colocar borda */
+}
+
+.img-user img{
+	 width: 80px; 
+	 border-radius: 50px;
+}

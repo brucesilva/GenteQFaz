@@ -1,0 +1,99 @@
+.radio{
+	font-size: 24px;
+	font-weight: 50px;
+	text-transform: capitalize;
+	display: inline-block;
+	vertical-align: middle;
+	color: black;
+	position: relative;
+	padding-left: 30px;
+
+	cursor: pointer;
+
+}
+
+.radio + .radio{
+	margin-left: 20px;
+
+}
+ 
+
+ 
+.radio input[type="radio"]{
+	display: none;
+}
+
+.radio span{
+	height: 15px; /* Aqui estou mexendo no tamanho do radio */
+	width: 15px;
+	border-radius: 30px; /* aqui é pra fazer ele ficar redondo  */
+	border: 3px solid #00aeef; /* o 3 é par aparecer  */
+	display: block;
+	position: absolute; /* aqui é a posição que o mesmo vai ficar  */
+	left: 0;
+	top: 1px;
+
+}
+
+.radio span:after{
+	content: "";
+	height: 8px;
+	width: 8px;
+	background: #00aeef;
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	border-radius: 50%;
+	transition: 300ms ease-in-out 0s;
+
+}
+
+.radio input[type="radio"]:checked ~ span:after{
+transform: translate(-50%, -50%) scale(1);
+}
+
+
+/*Estilizando o botão */
+
+
+.botaoForm{ 
+
+	float: left;
+	margin-top: 20px; 
+	margin-left: -450px;
+
+
+}
+
+
+.btn{
+	border-radius: 10px;
+	font-family: arial; 
+	font-size: 20px;
+	width: 850px;
+	height: 30px;
+	/* text-transform: uppercase;  aqui é para deixar a letra grande */
+	font-weight: 700;
+	border: none;
+	cursor: pointer;
+	margin-top: 40px;
+}
+
+.btn-green{
+	background: #87CEEB;
+	color: black;
+/*	box-shadow: 0 5px 0 #87CEFA; aqui é a borda */
+
+}
+
+.btn-green:hover{
+	background:#006000;
+	color: white;
+	/* box-shadow: 0 5px 0 #4682B4; */
+}
+
+.usuarios{
+	color: black;
+}
