@@ -72,13 +72,15 @@ transform: translate(-50%, -50%) scale(1);
 	border-radius: 10px;
 	font-family: arial; 
 	font-size: 20px;
-	width: 850px;
+	width: 150%;
 	height: 30px;
 	/* text-transform: uppercase;  aqui é para deixar a letra grande */
 	font-weight: 700;
 	border: none;
 	cursor: pointer;
-	margin-top: 40px;
+	margin-top: 20px; 
+	margin-left: 600px;
+	 
 }
 
 .btn-green{

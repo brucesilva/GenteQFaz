@@ -1,0 +1,78 @@
+body{
+/*	background: linear-gradient(-105deg, #90697b, #141646 50%, #2f2a60);
+	background-size: 100%; /*aqui é para deixar a imagem 100% da tela */
+}
+
+.h1{
+	 
+	 
+}
+
+.img{
+	border: 1px solid blue;
+	width: 30%;
+	float: right;
+
+}
+
+
+.principal{
+	border: 1px solid blue;
+	margin: auto;
+	width: 70%;
+	background: #E6E6FA;
+	border-radius: 80px;
+	margin-top:  2%;
+
+	opacity: 0.8;
+
+
+}
+
+.checkbox{
+	padding-top: 10px;
+	width: 40%;
+	text-align: left;
+	margin-left: -110px;
+	 
+	margin-left: -300px;
+
+}
+
+.input{
+	 
+	width: 30px;
+	float: left;
+}
+
+.textarea{
+	 
+	width: 51%;
+	text-align: center;
+	margin-left: -190px;
+}
+
+.atitudes{
+	font-size: 20px;
+	 
+	width: 180px;
+
+}
+
+input[type=submit] {
+  width: 20%;
+  /*background-color: #4CAF50;*/
+  color: white; 
+  margin: 8px 0;
+  border: none;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 30px;
+  margin-left: -500px;
+
+
+  background: linear-gradient(to  right, #3c269c, #eb7a80);
+  
+}
+
+ 

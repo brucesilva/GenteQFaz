@@ -1,0 +1,22 @@
+{
+    "name": "genteqfaz/votacao",
+    "authors": [
+        {
+            "name": "Bruce Silva",
+            "email": "bruce_silva1010@hotmail.com"
+        }
+    ],
+    "require": {
+
+    },
+
+    "autoload":{
+    	"psr-4":{
+    		"Classes\\":"classes/",
+    		"Control\\":"control/",
+    		"Model\\":"model/",
+    		"View\\":"view/"
+    	}
+    }
+}
+ 

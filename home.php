@@ -1,6 +1,4 @@
-<?php
-
-//include 'verifica_logado.php';
+<?php 
 //pegando a conexão do BDO
 require_once 'bd_connect.php';
 
@@ -32,14 +30,7 @@ $resultado = mysqli_query($connect,$sql);
 
 	else:
 
-	endif;
- 
-
-//$rb = $_POST['r']; //aqui estou pegando o valor que vem do radio button
-
-//echo $rb;
-
- // echo "<br> $cpf"; aqui eu mostro o cpf que está logado
+	endif;  
  
 ?>
 
@@ -55,12 +46,12 @@ $resultado = mysqli_query($connect,$sql);
 	<script>
 		 
 		//funcção para agradecer o usuário pelo voto
-	 	function msgDeOK(){
+	 	//function msgDeOK(){
 			//pegando o evento do botão
-		 	var botao = document.getElementById("btn_votar");//aqui estou pegando o botão	 
+		 	//var botao = document.getElementById("btn_votar");//aqui estou pegando o botão	 
 			// alert("Obrigado pelo seu voto");
 
-		 }
+		// }
 
 
 		function desabilitaRadio(){
@@ -279,6 +270,8 @@ $resultado = mysqli_query($connect,$sql);
 	<!--  <link rel="stylesheet" type="text/css" href="customHome.css"> -->
 	<link rel="stylesheet" type="text/css" href="csshome.css">  
 
+	<link rel="stylesheet" type="text/css" href="valores2.css">
+
 </head>
 <body>
 
@@ -286,10 +279,7 @@ $resultado = mysqli_query($connect,$sql);
 
 
  		<div class="logo">
-		<img src="seara.png"> 
- 		<!--<img src="img/genteQFaz2.png">	
-		<img src="seara.png"> 
-		<img src="logoProprio.png">-->
+		<img src="seara.png">  
 		</div>
 
 		
@@ -302,17 +292,16 @@ $resultado = mysqli_query($connect,$sql);
 
 
 
-<div class="pai"> <!--Essa div pego a parte central do site -->
+<div class="pai"> <!--Essa div pego a parte central do site --> 
 
-
-	<div class="h1">
-		<h1 >Seja bem vindo(a) <?php echo $dados['usuario'] ?>, vote no funcionário do mês do seu setor </h1>
+	<div class="h1"> 
+		<h1 >Seja bem vindo(a) <?php echo $dados['nome'] ?>, vote no funcionário do mês do seu setor </h1>
 	</div>
 
 <!--Aqui vou estilizar os radios button -->
 <div class="radio-group"> 
 	
-	<form action="gravaVoto.php"  method="POST"> 
+	<form action="gravaVoto2.php"  method="POST"> 
 		 
 		<div class="envolveFilhas"> <!--Essa div fica centralizada no meio da Div Pai -->
 
@@ -423,31 +412,109 @@ $resultado = mysqli_query($connect,$sql);
 		 <label class="radio"> 
 			<input type="radio" value="Monica" name="r" onclick="desabilitaRadio();"><div class="usuarios">  Monica Luzia da Silva </div>
 			<span></span> 
-		</label><br>
-
- 
-	 <div><!--aqui  fecha a div segunda  metade dos nomes -->
+		</label><br> 
+	 <div><!--aqui  fecha a div segunda  metade dos nomes --> 
 		  
-		<div class="botaoForm"> 
-
-		<button class="btn btn-green" type="submit" id="btn_votar" name="" value="Votar" onclick="msgDeOK();" disabled="true">Votar</button>
-		<!--	<input type="submit" id="btn_votar" name="" value="Votar" onclick="msgDeOK();">  -->
-		</div><!--Fecha a divi do botão form -->
-
-	</form>
-
+		
 	</div> <!--Fecha a divi do radio group -->
  
 	</div> <!-- Fecha a Div Classe principal -->
 
 </div><!--Fecha envolveFilhas -->
 
-</div><!--Fecha div pai -->
-
-<!-- 	<a href="index.php">sair</a> -->
-
-
-</main>
+</div><!--Fecha div pai --> 
  
+
+<!--***************************************************************
+	 		Aqui vou trazer os valores para a pessoa votar
+	 	--> 
+
+	 	<div class="principal2">
+
+	 		<!-- <form action="gravaVoto2.php"  method="POST"> -->
+
+		 	<div class="h1Checkbox">
+		 		<h1 align="center"> Informe os valores da JBS que o funcionário tem na sua opinião </h1>
+		 	</div><!--Fecha div h1 -->
+
+		 	<div class="checkbox"> 
+
+				  <div class="input">	
+	 			  	<input class="ck" type="checkbox" id="" name="valor[]" value="Atitude_de_Dono"> 
+	 			  </div><!--Fecha inpu -->
+
+	 			  <div class="atitudes">
+	  			  	<label for="">   Atitude de Dono  </label><br>
+	  			  </div> <!--fecha atitude -->
+				 
+				  <div class="input">	
+				  	<input class="ck" type="checkbox" id="" name="valor[]" value="Determinação">
+				  </div><!--fecha atitude -->
+				  	
+				  <div class="atitudes">
+				  	<label for=""> Determinação</label><br>
+				  </div>
+
+				  <div class="input">	
+				  	<input class="ck" type="checkbox" id="" name="valor[]" value="Disciplina">
+				  </div>
+
+				  <div class="atitudes">
+				  	<label for=""> Disciplina</label><br>
+				  </div>
+
+				  <div class="input">
+				  	<input class="ck" type="checkbox" id="" name="valor[]" value="Simplicidade">
+				  </div>
+
+				 <div class="atitudes">
+				  	<label for=""> Simplicidade</label><br>
+				  </div>
+				  
+				  <div class="input">
+				  	<input class="ck" type="checkbox" id="" name="valor[]" value="Franqueza">
+				  </div>
+
+				  <div class="atitudes">
+				  	<label for=""> Franqueza</label><br>
+				  </div> 
+
+				  <div class="input">
+				  	<input class="ck" type="checkbox" id="" name="valor[]" value="Hulmildade">
+				  </div>
+
+				 <div class="atitudes">
+				  	<label for=""> Humildade</label><br>
+				  </div> 
+
+	 			 </div><!--fecha ckeckbox -->
+
+
+	 			 <!--Aqui vai o textArea -->
+
+	 			 <div class="textarea">
+
+			  		<h3 align="left"> Cite algumas qualidades do funcionário!  </h3>
+ 
+			  		<textarea cols=60 id="opiniao" rows="10" name="opiniao" maxlength="255" wrap="hard" placeholder="Informe o motivo que você acredita que esse funcionário merece ser o funcionário desse mês "></textarea>
+  			
+				</div> <!--fecha textarea -->   
+
+
+	 			 <!--Aqui acaba o textArea --> 
+
+	 			 <div class="botaoForm">  
+					<button class="btn btn-green" type="submit" id="btn_votar" name="" value="Votar" onclick="msgDeOK();" disabled="true">Votar</button>
+				<!--	<input type="submit" id="btn_votar" name="" value="Votar" onclick="msgDeOK();">  -->
+				</div><!--Fecha a divi do botão form -->
+
+		</div><!--fecha principal -->
+ 	</form>
+
+	 	<!--***************************************************************
+	 		Aqui termina os valores
+	 	-->
+
+ </main>
 </body>
 </html>

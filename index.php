@@ -10,6 +10,14 @@ if(isset($_POST['btn-entrar'])):
 	$erros = array(); //aqui é para pegar os erros
 	$cpf = mysqli_escape_string($connect, $_POST['cpf']);
 
+
+
+	//aqui vou direcionar para as partes do administrador do sistema
+	if($cpf == 1234){ 
+		$_SESSION['adm'] = true; //aqui é para pegar em outra página
+		header('Location:administrador.php');
+	}
+
 	//aqui vamos verificar se os campos estão vazios
 	if(empty($cpf)):
 		$erros[] = "<li> O campo CPF precisa ser preenchido </li>";
@@ -131,9 +139,7 @@ endif;//fecha o if principal
 
 									endforeach;	 
 								endif; 
-							?>	
-
-
+							?>	 
 
 		</form>
  	</div><!--Fecha caixa login -->

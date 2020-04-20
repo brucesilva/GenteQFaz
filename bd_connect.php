@@ -4,7 +4,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$db = "genteQFaz";
+$db = "projetoseara";
 
 
 $connect = mysqli_connect($servername,$username,$password,$db);
